@@ -166,7 +166,7 @@ body {
     max-width: 80%;
 }
 
-/* Modal Styling */
+/* Modern Modal & Form Styling */
 .modal-custom {
     display: none;
     position: fixed;
@@ -175,31 +175,114 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Transparent light background */
+    backdrop-filter: blur(15px);
+    /* Strong blur effect */
+    transition: all 0.3s ease;
 }
 
 .modal-content-custom {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    width: 400px;
+    background: rgba(255, 255, 255, 0.85);
+    margin: 5% auto;
+    padding: 3rem;
+    border-radius: 2rem;
+    width: 420px;
     position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    animation: modalFadeIn 0.4s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close-modal {
     position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 2rem;
+    right: 25px;
+    top: 20px;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: #64748b;
+    color: #a3b18a;
+    transition: color 0.3s;
 }
 
-.btn-teal {
-    background-color: #5fb5c1;
+.close-modal:hover {
+    color: #588157;
+}
+
+.text-dark-green {
+    color: #1a3a5f;
+}
+
+.modal-header-modern h2 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.form-control-modern {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    border-radius: 50px;
+    /* Fully rounded inputs */
+    border: 1px solid #e9ecef;
+    background: #fff;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.form-control-modern:focus {
+    border-color: #0000ff;
+    box-shadow: 0 0 0 4px rgba(0, 0, 255, 0.1);
+}
+
+.btn-signin-modern {
+    background: #0000ff;
+    /* Primary Blue */
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-signin-modern:hover {
+    background: #0000cc;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2);
+}
+
+.forgot-link {
+    color: #0000ff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.signup-text {
+    font-size: 0.95rem;
+    color: #1a3a5f;
+}
+
+.signup-text a {
+    color: #0000ff;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Search Box */
@@ -401,18 +484,17 @@ body {
 }
 
 .social-icon-circle {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     background: #333;
-    /* Default gray for circles */
-    border-radius: 50%;
+    border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff !important;
     text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .social-icon-circle.whatsapp {
@@ -589,15 +671,37 @@ body {
     height: 40px;
     background: #000;
     color: white !important;
-    border-radius: 50%;
+    border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.social-circle-dark.whatsapp {
+    background: #25D366;
+}
+
+.social-circle-dark.facebook {
+    background: #1877F2;
+}
+
+.social-circle-dark.instagram {
+    background: #E4405F;
+}
+
+.social-circle-dark.linkedin {
+    background: #0A66C2;
+}
+
+.social-circle-dark.twitter {
+    background: #1DA1F2;
 }
 
 .social-circle-dark:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }

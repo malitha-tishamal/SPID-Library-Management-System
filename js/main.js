@@ -28,6 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target == signinModal) signinModal.style.display = 'none';
     });
 
+    // Switch between Modals
+    const openSignUp = document.getElementById('openSignUp');
+    const openLogin = document.getElementById('openLogin');
+
+    if (openSignUp) {
+        openSignUp.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            signinModal.style.display = 'block';
+        });
+    }
+
+    if (openLogin) {
+        openLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signinModal.style.display = 'none';
+            loginModal.style.display = 'block';
+        });
+    }
+
     // Navbar Scroll Effect
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
