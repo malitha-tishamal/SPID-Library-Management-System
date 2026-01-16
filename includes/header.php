@@ -31,7 +31,7 @@
             <ul class="nav-links-custom d-none d-lg-flex">
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="index.php#about">About</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="index.php#contact">Contact Us</a></li>
                 <li><a href="index.php#books">Books</a></li>
             </ul>
             <div class="nav-actions d-none d-sm-flex">
@@ -40,8 +40,25 @@
                 <a href="javascript:void(0)" id="signinBtn" class="btn-custom btn-signin"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
             </div>
 
-            <div class="menu-toggle d-lg-none">
+            <div id="menuToggle" class="menu-toggle d-lg-none">
                 <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu-overlay">
+                <div class="mobile-menu-content">
+                    <span class="close-mobile-menu">&times;</span>
+                    <ul class="mobile-nav-links">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="index.php#about">About</a></li>
+                        <li><a href="index.php#contact">Contact Us</a></li>
+                        <li><a href="index.php#books">Books</a></li>
+                    </ul>
+                    <div class="mobile-nav-actions">
+                        <a href="javascript:void(0)" class="btn-custom btn-login w-100 mb-3 open-login">Login</a>
+                        <a href="javascript:void(0)" class="btn-custom btn-signin w-100 open-signin">Sign In</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
