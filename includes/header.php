@@ -34,31 +34,49 @@
                 <li><a href="index.php#contact">Contact Us</a></li>
                 <li><a href="index.php#books">Books</a></li>
             </ul>
-            <div class="nav-actions d-none d-sm-flex">
+            <div class="nav-actions d-flex align-items-center gap-2 ms-auto me-2">
                 <a href="javascript:void(0)" id="loginBtn" class="btn-custom btn-login"><i class="fa-solid fa-user-large"></i> Login</a>
-                &nbsp;&nbsp;
                 <a href="javascript:void(0)" id="signinBtn" class="btn-custom btn-signin"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
             </div>
 
             <div id="menuToggle" class="menu-toggle d-lg-none">
                 <i class="fa-solid fa-bars"></i>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="mobile-menu-overlay">
-                <div class="mobile-menu-content">
-                    <span class="close-mobile-menu">&times;</span>
-                    <ul class="mobile-nav-links">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="index.php#about">About</a></li>
-                        <li><a href="index.php#contact">Contact Us</a></li>
-                        <li><a href="index.php#books">Books</a></li>
-                    </ul>
-                    <div class="mobile-nav-actions">
-                        <a href="javascript:void(0)" class="btn-custom btn-login w-100 mb-3 open-login">Login</a>
-                        <a href="javascript:void(0)" class="btn-custom btn-signin w-100 open-signin">Sign In</a>
-                    </div>
-                </div>
-            </div>
         </nav>
     </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <span class="close-mobile-menu">&times;</span>
+            <ul class="mobile-nav-links">
+                <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="index.php#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="index.php#contact"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                <li><a href="index.php#books"><i class="fa-solid fa-book"></i> Books</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Emergency Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            const close = document.querySelector('.close-mobile-menu');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    menu.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            
+            if (close && menu) {
+                close.addEventListener('click', function() {
+                    menu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>

@@ -8,18 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeBtns = document.querySelectorAll('.close-modal');
 
-    loginBtn.addEventListener('click', () => {
-        loginModal.style.display = 'block';
-    });
+    if (loginBtn && loginModal) {
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'block';
+        });
+    }
 
-    signinBtn.addEventListener('click', () => {
-        signinModal.style.display = 'block';
-    });
+    if (signinBtn && signinModal) {
+        signinBtn.addEventListener('click', () => {
+            signinModal.style.display = 'block';
+        });
+    }
 
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            loginModal.style.display = 'none';
-            signinModal.style.display = 'none';
+            if (loginModal) loginModal.style.display = 'none';
+            if (signinModal) signinModal.style.display = 'none';
         });
     });
 
@@ -32,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openSignUp = document.getElementById('openSignUp');
     const openLogin = document.getElementById('openLogin');
 
-    if (openSignUp) {
+    if (openSignUp && loginModal && signinModal) {
         openSignUp.addEventListener('click', (e) => {
             e.preventDefault();
             loginModal.style.display = 'none';
@@ -40,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (openLogin) {
+    if (openLogin && signinModal && loginModal) {
         openLogin.addEventListener('click', (e) => {
             e.preventDefault();
             signinModal.style.display = 'none';
@@ -50,11 +54,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar Scroll Effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.padding = '0.5rem 0';
-        } else {
-            header.style.padding = '1rem 0';
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.padding = '0.5rem 0';
+            } else {
+                header.style.padding = '1rem 0';
+            }
+        });
+    }
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobileMenu = document.querySelector('.close-mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        if (closeMobileMenu) {
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         }
-    });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // Integrate Mobile Login/Signup Buttons
+    const mobileLoginBtn = document.querySelector('.open-login');
+    const mobileSigninBtn = document.querySelector('.open-signin');
+
+    if (mobileLoginBtn && loginModal) {
+        mobileLoginBtn.addEventListener('click', () => {
+            if (mobileMenu) mobileMenu.classList.remove('active');
+            loginModal.style.display = 'block';
+        });
+    }
+
+    if (mobileSigninBtn && signinModal) {
+        mobileSigninBtn.addEventListener('click', () => {
+            if (mobileMenu) mobileMenu.classList.remove('active');
+            signinModal.style.display = 'block';
+        });
+    }
 });
