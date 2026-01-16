@@ -1,4 +1,4 @@
-<!-- Modals -->
+﻿<!-- Modals -->
 <div id="loginModal" class="modal-custom">
     <div class="modal-content-custom login-modern">
         <span class="close-modal">&times;</span>
@@ -14,7 +14,7 @@
             </div>
             <div class="mb-4">
                 <label class="form-label fw-semibold text-dark-green">Password</label>
-                <input type="password" class="form-control-modern" placeholder="••••••••••••">
+                <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
             </div>
             
             <button type="submit" class="btn-signin-modern w-100 mb-3">
@@ -79,11 +79,11 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Password</label>
-                    <input type="password" class="form-control-modern" placeholder="••••••••••••" required>
+                    <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
                 </div>
                 <div class="col-md-6 mb-4">
                     <label class="form-label fw-semibold text-dark-green">Confirm Password</label>
-                    <input type="password" class="form-control-modern" placeholder="••••••••••••" required>
+                    <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
                 </div>
             </div>
             

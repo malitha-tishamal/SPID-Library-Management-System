@@ -1,4 +1,4 @@
-<!-- Hero Section -->
+﻿<!-- Hero Section -->
 <section id="home" class="hero-section">
     <div class="pattern-bg"></div>
     <div class="container position-relative">

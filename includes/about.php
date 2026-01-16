@@ -1,11 +1,11 @@
-<!-- About Section -->
+﻿<!-- About Section -->
 <section id="about" class="about-section py-5">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
             <h1 class="contact-title mb-0">About <span class="text-teal">Us</span></h1>
             <div class="search-box-custom">
                 <i class="fa-solid fa-search"></i>
-                <input type="text" placeholder="Search">
+                <input type="text" id="aboutSearch" placeholder="Search updates...">
                 <i class="fa-solid fa-chevron-right ms-2"></i>
             </div>
         </div>

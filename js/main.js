@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     // Modal Logic
     const loginModal = document.getElementById('loginModal');
     const signinModal = document.getElementById('signinModal');
@@ -108,4 +108,31 @@ document.addEventListener('DOMContentLoaded', () => {
             signinModal.style.display = 'block';
         });
     }
+
+    // Real-time Search Functionality
+    const filterItems = (inputId, itemSelector, secondarySelector) => {
+        const input = document.getElementById(inputId);
+        if (!input) return;
+
+        input.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const items = document.querySelectorAll(itemSelector);
+
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                const parentCol = item.closest('[class*="col-"]');
+
+                if (text.includes(term)) {
+                    if (parentCol) parentCol.style.display = 'block';
+                    else item.style.display = 'block';
+                } else {
+                    if (parentCol) parentCol.style.display = 'none';
+                    else item.style.display = 'none';
+                }
+            });
+        });
+    };
+
+    filterItems('aboutSearch', '.feature-card-custom');
+    filterItems('bookSearch', '.book-card-outer');
 });

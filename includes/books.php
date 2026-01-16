@@ -1,11 +1,11 @@
-<!-- Books Section -->
+﻿<!-- Books Section -->
 <section id="books" class="books-section py-5 bg-light">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
             <h1 class="contact-title mb-0">Book</h1>
             <div class="search-box-custom">
                 <i class="fa-solid fa-search"></i>
-                <input type="text" placeholder="Search">
+                <input type="text" id="bookSearch" placeholder="Search books...">
                 <i class="fa-solid fa-chevron-right ms-2"></i>
             </div>
         </div>
