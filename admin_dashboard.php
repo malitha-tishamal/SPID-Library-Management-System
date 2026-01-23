@@ -19,6 +19,50 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/admin.css">
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Config -->
+    <script src="js/firebase-config.js"></script>
+
+    <script>
+        // Protect Route
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in. Check role in Firestore
+                const db = firebase.firestore();
+                db.collection("users").doc(user.uid).get().then((doc) => {
+                    if (doc.exists) {
+                        const userData = doc.data();
+                        if (userData.role !== 'admin') {
+                            window.location.href = "index.php"; // Not admin
+                        } else {
+                            // Update UI with user info
+                            document.getElementById('adminNameDisplay').innerText = userData.fullName || 'Admin';
+                        }
+                    } else {
+                         window.location.href = "index.php";
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
+                     window.location.href = "index.php";
+                });
+            } else {
+                // No user is signed in.
+                window.location.href = "index.php";
+            }
+        });
+
+        // Logout function
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = "index.php";
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -74,8 +118,8 @@
                    <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="user-info d-none d-sm-block">
-                    <h6>Admin User</h6>
-                    <small>Administrator</small>
+                    <h6 id="adminNameDisplay">Admin User</h6>
+                    <small onclick="logout()" style="cursor: pointer; color: red;">Logout</small>
                 </div>
             </div>
         </div>

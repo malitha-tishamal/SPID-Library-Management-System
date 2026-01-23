@@ -7,15 +7,15 @@
             <p class="text-muted">Nice to see you again!</p>
         </div>
         
-        <form class="modern-form">
+<form class="modern-form" id="loginForm">
             <div class="mb-3">
                 <label class="form-label fw-semibold text-dark-green">Email</label>
-                <input type="email" class="form-control-modern" placeholder="team@mynaui.com">
+                <input type="email" name="email" class="form-control-modern" placeholder="team@mynaui.com" required>
             </div>
-<div class="mb-4">
+            <div class="mb-4">
                 <label class="form-label fw-semibold text-dark-green">Password</label>
                 <div class="position-relative">
-                    <input type="password" class="form-control-modern" placeholder="Enter Password" id="loginPassword" style="padding-right: 45px;">
+                    <input type="password" name="password" class="form-control-modern" placeholder="Enter Password" id="loginPassword" style="padding-right: 45px;" required>
                     <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('loginPassword', this)"></i>
                 </div>
             </div>
@@ -40,26 +40,26 @@
             <p class="text-muted">Create your account</p>
         </div>
         
-        <form class="modern-form">
+<form class="modern-form" id="signupForm">
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Full Name</label>
-                    <input type="text" class="form-control-modern" placeholder="John Doe" required>
+                    <input type="text" name="full_name" class="form-control-modern" placeholder="John Doe" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">NIC</label>
-                    <input type="text" class="form-control-modern" placeholder="123456789V" required>
+                    <input type="text" name="nic" class="form-control-modern" placeholder="123456789V" required>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Phone Number</label>
-                    <input type="tel" class="form-control-modern" placeholder="+94 7X XXX XXXX" required>
+                    <input type="tel" name="phone" class="form-control-modern" placeholder="+94 7X XXX XXXX" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Gender</label>
-                    <select class="form-control-modern" required>
+                    <select name="gender" class="form-control-modern" required>
                         <option value="" disabled selected>Select Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -71,26 +71,26 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Email</label>
-                    <input type="email" class="form-control-modern" placeholder="email@example.com" required>
+                    <input type="email" name="email" class="form-control-modern" placeholder="email@example.com" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Staff ID</label>
-                    <input type="text" class="form-control-modern" placeholder="SID12345" required>
+                    <input type="text" name="staff_id" class="form-control-modern" placeholder="SID12345" required>
                 </div>
             </div>
 
             <div class="row">
-<div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Password</label>
                     <div class="position-relative">
-                        <input type="password" class="form-control-modern" placeholder="Enter Password" id="signupPassword" required style="padding-right: 45px;">
+                        <input type="password" name="password" class="form-control-modern" placeholder="Enter Password" id="signupPassword" required style="padding-right: 45px;">
                         <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('signupPassword', this)"></i>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <label class="form-label fw-semibold text-dark-green">Confirm Password</label>
                     <div class="position-relative">
-                        <input type="password" class="form-control-modern" placeholder="Confirm Password" id="signupConfirmPassword" required style="padding-right: 45px;">
+                        <input type="password" name="confirm_password" class="form-control-modern" placeholder="Confirm Password" id="signupConfirmPassword" required style="padding-right: 45px;">
                         <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('signupConfirmPassword', this)"></i>
                     </div>
                 </div>
