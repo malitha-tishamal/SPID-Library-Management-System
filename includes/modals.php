@@ -12,9 +12,12 @@
                 <label class="form-label fw-semibold text-dark-green">Email</label>
                 <input type="email" class="form-control-modern" placeholder="team@mynaui.com">
             </div>
-            <div class="mb-4">
+<div class="mb-4">
                 <label class="form-label fw-semibold text-dark-green">Password</label>
-                <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
+                <div class="position-relative">
+                    <input type="password" class="form-control-modern" placeholder="Enter Password" id="loginPassword" style="padding-right: 45px;">
+                    <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('loginPassword', this)"></i>
+                </div>
             </div>
             
             <button type="submit" class="btn-signin-modern w-100 mb-3">
@@ -77,13 +80,19 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6 mb-3">
+<div class="col-md-6 mb-3">
                     <label class="form-label fw-semibold text-dark-green">Password</label>
-                    <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
+                    <div class="position-relative">
+                        <input type="password" class="form-control-modern" placeholder="Enter Password" id="signupPassword" required style="padding-right: 45px;">
+                        <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('signupPassword', this)"></i>
+                    </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <label class="form-label fw-semibold text-dark-green">Confirm Password</label>
-                    <input type="password" class="form-control-modern" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
+                    <div class="position-relative">
+                        <input type="password" class="form-control-modern" placeholder="Confirm Password" id="signupConfirmPassword" required style="padding-right: 45px;">
+                        <i class="fa-solid fa-eye password-toggle-icon" onclick="togglePassword('signupConfirmPassword', this)"></i>
+                    </div>
                 </div>
             </div>
             

@@ -23,22 +23,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Service Section -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-section">
-                        <h4>Service</h4>
-                        <ul class="footer-list">
-                            <li><a href="#">Illustration</a></li>
-                            <li><a href="#">Mobile Design</a></li>
-                            <li><a href="#">Motion Graphic</a></li>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">SEO</a></li>
-                        </ul>
-                    </div>
-                </div>
-
                 <!-- Company Section -->
                 <div class="col-lg-2 col-md-6">
                     <div class="footer-section">
@@ -57,13 +41,7 @@
                 <!-- Social & Emblem Section -->
                 <div class="col-lg-2 col-md-12">
                     <div class="footer-right-column">
-                        <div class="social-icons-row mb-4">
-                            <a href="#" class="social-icon-circle whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#" class="social-icon-circle facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon-circle youtube"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#" class="social-icon-circle linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon-circle twitter"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
+                        
                         <div class="gov-emblem-container text-end">
                             <img src="assets/images/gov.png" alt="Government Emblem" class="img-fluid gov-emblem-large">
                         </div>

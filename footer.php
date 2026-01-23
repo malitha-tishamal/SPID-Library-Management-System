@@ -24,20 +24,7 @@
                     </div>
                 </div>
 
-                <!-- Service Section -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-section">
-                        <h4>Service</h4>
-                        <ul class="footer-list">
-                            <li><a href="#">Illustration</a></li>
-                            <li><a href="#">Mobile Design</a></li>
-                            <li><a href="#">Motion Graphic</a></li>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">SEO</a></li>
-                        </ul>
-                    </div>
-                </div>
+               
 
                 <!-- Company Section -->
                 <div class="col-lg-2 col-md-6">
@@ -54,7 +41,7 @@
                     </div>
                 </div>
 
-                <!-- Social & Emblem Section -->
+                <!-- Social & Emblem Section >
                 <div class="col-lg-2 col-md-12">
                     <div class="footer-right-column">
                         <div class="social-icons-row mb-4">
@@ -68,7 +55,7 @@
                             <img src="assets/images/gov.png" alt="Government Emblem" class="img-fluid gov-emblem-large">
                         </div>
                     </div>
-                </div>
+                </div-->
             </div>
             
             <div class="footer-bottom mt-5 pt-4 text-center border-top">

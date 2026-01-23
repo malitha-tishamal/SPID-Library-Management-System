@@ -34,6 +34,7 @@ body {
     border-radius: 9999px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    position: relative;
 }
 
 .logo img {
@@ -45,6 +46,9 @@ body {
     margin: 0;
     padding: 0;
     gap: 2.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-links-custom a {
@@ -935,4 +939,20 @@ body {
     transform: translateY(-5px);
     filter: brightness(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Password Toggle */
+.password-toggle-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.password-toggle-icon:hover {
+    color: var(--primary-custom);
 }
