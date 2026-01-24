@@ -48,14 +48,6 @@
                             <i class="fa-solid fa-envelope"></i>
                             <span>irrigation@gmail.com</span>
                         </div>
-                        
-                        <div class="social-links-contact d-flex gap-3">
-                            <a href="#" class="social-circle-dark whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="#" class="social-circle-dark facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="social-circle-dark instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="social-circle-dark linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" class="social-circle-dark twitter"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
